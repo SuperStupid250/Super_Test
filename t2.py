@@ -1,15 +1,10 @@
 from selenium import webdriver
-import requests
 import time
-url = 'http://192.168.66.219/pan/nodes'
+
+url = 'http://localhost:63342/29inchtest/Super_Test/mybaidu.html?_ijt=utavi89dnog4t4njaoeihbp7f3'
 driver = webdriver.Chrome()
 driver.get(url)
-driver.find_element_by_xpath('//*[@id="passwd"]').click()
-driver.find_element_by_xpath('//*[@id="passwd"]').send_keys('Lock4Safe')
-driver.find_element_by_xpath('/html/body/div/div/div/div/div[2]/form/button').click()
-
-time.sleep(5)
-
+time.sleep(1)
 a = driver.find_elements_by_xpath('//div[@class="card-body"]/table//tr/td[1]')
 b = driver.find_elements_by_xpath('//div[@class="card-body"]/table//tr/td[5]/span')
 # b = driver.find_element_by_xpath('//div[@class="card-body"]/table//tr[2]/td[5]/span').get_attribute('class')
@@ -17,8 +12,3 @@ for i,j in zip(a,b):
     title = i.text
     list = j.get_attribute('class')
     print(title +'----' +list)
-
-
-
-
-

@@ -7,7 +7,7 @@ from datetime import datetime
 from datetime import timedelta
 from datetime import timezone
 from show_nodeid import SHOW_NODEID
-from templateCar import SHOW_NODEID
+#from templateCar import SHOW_NODEID
 from TheWorld import *
 
 #from test import test_node_id
@@ -17,12 +17,12 @@ URL = "https://api.sync-sign.com/v2/key/"
 NG_LIST = ['00124B0023ACF532', '00124b0002098a8b', '00124b0002098a56']
 
 
-# API_KEY = "ed21892b-c51f-4caf-9dc9-39b9360abb04"
-# HUB = 'MCF008D166A584'
+API_KEY = "ed21892b-c51f-4caf-9dc9-39b9360abb04"
+HUB = 'MCF008D166A584'
 
 #即将出货设备
-API_KEY = "b62d6002-a5a4-45e5-82f8-e1471027b51c"
-HUB = 'MC7C9EBD29182C'
+# API_KEY = "b62d6002-a5a4-45e5-82f8-e1471027b51c"
+# HUB = 'MC7C9EBD29182C'
 
 
 
@@ -123,7 +123,7 @@ class WEBAPI:
                         layout = self.getLayout(SHOW_NODEID)
                         for l in layout["layout"]["items"]:
                             if l["data"]["id"] == "BEIJING_TIME":
-                                l["data"]["text"] = str(i)#self.getBeijingTime()
+                                l["data"]["text"] = str(i+100)#self.getBeijingTime()
                         # print(layout)
 
                         # START TO PUSH LAYOUT FOR NODEID IN NODELIST
