@@ -2,47 +2,67 @@ SHOW_NODEID = '''
 {
     "layout":
     {
-  "background": {
-  "bgColor": "BLACK",
-  "enableButtonZone": false,
-  "rectangle": {
-    "strokeThickness": 6,
-    "strokeColor": "BLACK",
-    "fillColor": "RED",
-    "block": {
-      "x_percent": 10,
-      "y_percent": 30,
-      "w_percent": 80,
-      "h_percent": 40
-    }
-  }
-},
-        "items": [
-            { "type": "TEXT",
-                "data": {
-                    "id": "NODE_ID",
-                    "text": "<NODE_ID>",
-                    "textColor": "BLACK",
-                    "textAlign": "CENTER",
-                    "backgroundColor": "BLACK",
-                    "font": "DDIN_24",
-                    "block": { "x": 8, "y": 56, "w": 280, "h": 48 },
-                    "offset": { "x": 0, "y": 0 }
-                }
-            },
-            { "type": "TEXT",
-                "data": {
-                    "id": "BEIJING_TIME",
-                    "text": "Fri, Jan 08 15:20",
-                    "textColor": "RED",
-                    "textAlign": "CENTER",
-                    "backgroundColor": "RED",
-                    "font": "DDIN_CONDENSED_32",
-                    "block": { "x": 0, "y": 0, "w": 296, "h": 32 },
-                    "offset": { "x": -4, "y": 0 }
-                }
+    "background": {
+        "bgColor": "WHITE",
+        "enableButtonZone": false,
+        "rectangle": {
+            "strokeThickness": 0,
+            "fillColor": "RED",
+            "block": {
+                "x_percent": 0,
+                "y_percent": 0,
+                "w_percent": 100,
+                "h_percent": 68
             }
-        ]
-    }
+        }
+    },
+    "items": [
+        { "type": "TEXT",
+          "data": {
+            "text": "%ONGOING_TIME%",
+            "id": "ONGOING_TIME",
+            "textColor": "WHITE",
+            "textAlign": "RIGHT",
+            "backgroundColor": "RED",
+            "font": "DDIN_24",
+            "block": { "x": 0, "y": 0, "w": 296, "h": 32 },
+            "offset": { "x": -4, "y": 0 }
+          }
+        },
+        { "type": "TEXT",
+          "data": {
+            "text": "%ONGOING_EVENT_SUMMARY%",
+            "id": "ONGOING_EVENT_SUMMARY",
+            "textColor": "WHITE",
+            "backgroundColor": "RED",
+            "textAlign": "CENTER",
+            "font": "YANONE_KAFFEESATZ_44_B",
+            "lineSpace": 6,
+            "block": { "x": 0, "y": 32, "w": 296, "h": 62 },
+            "offset": { "x": 0, "y": 6 }
+          }
+        },
+        { "type": "TEXT",
+          "data": {
+            "text": "%UPCOMING%",
+            "id": "UPCOMING_1_TIME",
+            "font": "DDIN_CONDENSED_16",
+            "textAlign": "LEFT",
+            "block": { "x": 0, "y": 96, "w": 296, "h": 16 },
+            "offset": { "x": 2, "y": 0 }
+          }
+        },
+        { "type": "TEXT",
+          "data": {
+            "text": "%UPCOMING%",
+            "id": "UPCOMING_1_SUMMARY",
+            "font": "DDIN_CONDENSED_16",
+            "textAlign": "LEFT",
+            "block": { "x": 0, "y": 112, "w": 296, "h": 16 },
+            "offset": { "x": 2, "y": 0 }
+          }
+        }
+    ]
+}
 }
 '''
