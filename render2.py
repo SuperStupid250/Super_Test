@@ -119,7 +119,7 @@ class WEBAPI:
 
                         layout = self.getLayout(SHOW_NODEID)
                         for l in layout["layout"]["items"]:
-                            if l["data"]["id"] == "SXCS":
+                            if l["data"]["id"] == "UPCOMING_1_SUMMARY":
                                 l["data"]["text"] = str(i)#self.getBeijingTime()
                         # print(layout)
                         for l in layout["layout"]["items"]:
@@ -127,7 +127,7 @@ class WEBAPI:
                                 l["data"]["text"] = self.getBeijingTime()
 
                         for l in layout["layout"]["items"]:
-                            if l["data"]["id"] == "UPCOMING_1_SUMMARY":
+                            if l["data"]["id"] == "SXCS":
                                 l["data"]["text"] = 'eat' + random.choice(['Pig feet rice','McDonalds','XiaoYuHao','KeWeiYuan','Dumplings','Snail powder'])
 
                         # START TO PUSH LAYOUT FOR NODEID IN NODELIST
