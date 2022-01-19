@@ -9,7 +9,7 @@ from datetime import timezone
 from show_nodeid import SHOW_NODEID
 #from templateCar import SHOW_NODEID
 from TheWorld import *
-
+import random
 #from test import test_node_id
 
 
@@ -24,11 +24,8 @@ HUB = 'MCF008D166A584'
 # API_KEY = "b62d6002-a5a4-45e5-82f8-e1471027b51c"
 # HUB = 'MC7C9EBD29182C'
 
-
-
-INTERVAL = 10 # x秒刷一次
+INTERVAL = 60 # x秒刷一次
 TIME_ZONE = 8 # 时区是8
-
 
 class WEBAPI:
     #@RecordingTime
@@ -122,9 +119,16 @@ class WEBAPI:
 
                         layout = self.getLayout(SHOW_NODEID)
                         for l in layout["layout"]["items"]:
-                            if l["data"]["id"] == "BEIJING_TIME":
-                                l["data"]["text"] = str(i+100)#self.getBeijingTime()
+                            if l["data"]["id"] == "SXCS":
+                                l["data"]["text"] = str(i)#self.getBeijingTime()
                         # print(layout)
+                        for l in layout["layout"]["items"]:
+                            if l["data"]["id"] == "BEIJING_TIME":
+                                l["data"]["text"] = self.getBeijingTime()
+
+                        for l in layout["layout"]["items"]:
+                            if l["data"]["id"] == "UPCOMING_1_SUMMARY":
+                                l["data"]["text"] = 'eat' + random.choice(['Pig feet rice','McDonalds','XiaoYuHao','KeWeiYuan','Dumplings','Snail powder'])
 
                         # START TO PUSH LAYOUT FOR NODEID IN NODELIST
                         for nodeId in nodeIdList:

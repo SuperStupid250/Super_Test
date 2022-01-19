@@ -1,13 +1,16 @@
 SHOW_NODEID = '''
 {
     "layout":
-    {
+    
+{
     "background": {
         "bgColor": "WHITE",
         "enableButtonZone": false,
         "rectangle": {
-            "strokeThickness": 0,
-            "fillColor": "RED",
+            "strokeThickness": 1,
+            "fillColor": "WHITE",
+            "strokeColor": "BLACK",
+            "fillPattern": "NONE",
             "block": {
                 "x_percent": 0,
                 "y_percent": 0,
@@ -19,32 +22,27 @@ SHOW_NODEID = '''
     "items": [
         { "type": "TEXT",
           "data": {
-            "text": "%ONGOING_TIME%",
-            "id": "ONGOING_TIME",
-            "textColor": "WHITE",
-            "textAlign": "RIGHT",
-            "backgroundColor": "RED",
-            "font": "DDIN_24",
-            "block": { "x": 0, "y": 0, "w": 296, "h": 32 },
-            "offset": { "x": -4, "y": 0 }
-          }
-        },
-        { "type": "TEXT",
-          "data": {
-            "text": "%ONGOING_EVENT_SUMMARY%",
-            "id": "ONGOING_EVENT_SUMMARY",
-            "textColor": "WHITE",
-            "backgroundColor": "RED",
-            "textAlign": "CENTER",
+            "text": "Fri, Jan 08 15:20",
+            "id": "SXCS",
             "font": "YANONE_KAFFEESATZ_44_B",
-            "lineSpace": 6,
-            "block": { "x": 0, "y": 32, "w": 296, "h": 62 },
-            "offset": { "x": 0, "y": 6 }
+            "textAlign": "CENTER",
+            "block": { "x": 32, "y": 8, "w": 232, "h": 56 },
+            "offset": { "x": 0, "y": 0 }
           }
         },
         { "type": "TEXT",
           "data": {
-            "text": "%UPCOMING%",
+            "text": "22222222222",
+            "id": "BEIJING_TIME",
+            "font": "DDIN_CONDENSED_24",
+            "textAlign": "CENTER",
+            "block": { "x": 32, "y": 56, "w": 232, "h": 24 },
+            "offset": { "x": 0, "y": 0 }
+          }
+        },
+        { "type": "TEXT",
+          "data": {
+            "text": "<NODE_ID>",
             "id": "UPCOMING_1_TIME",
             "font": "DDIN_CONDENSED_16",
             "textAlign": "LEFT",
@@ -54,7 +52,7 @@ SHOW_NODEID = '''
         },
         { "type": "TEXT",
           "data": {
-            "text": "%UPCOMING%",
+            "text": "66666666666666666",
             "id": "UPCOMING_1_SUMMARY",
             "font": "DDIN_CONDENSED_16",
             "textAlign": "LEFT",
